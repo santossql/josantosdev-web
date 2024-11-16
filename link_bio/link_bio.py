@@ -1,10 +1,10 @@
 import reflex as rx
 
 from link_bio.components.navbar import navbar
-from link_bio.views.header.header import header
-from link_bio.views.links.links import links
+from link_bio.views.header import header
+from link_bio.views.links import links
 from link_bio.components.footer import footer
-from link_bio.views.sponsors.sponsors import sponsors
+from link_bio.views.sponsors import sponsors
 import link_bio.styles.styles as styles
 
 # Backend
@@ -33,6 +33,10 @@ def index() -> rx.Component:
     )
 
 
+title = "JosantosDev | Te enseño programación y desarrollo de software."
+description = "Hola, mi nombre es Jonathan Santos. Soy ingeniero de software, desarrollo freelancer full-stack y divulgador."
+preview = "https://josantosdev.com/preview.jpg"
+
 app = rx.App(
     theme=rx.theme(
         appearance="light",
@@ -42,9 +46,29 @@ app = rx.App(
     ),
     stylesheets=styles.STYLESHEETS,
     style=styles.BASE_STYLE,
+    head_components=[
+        rx.script(src="https://googletagmanager.com/gtag/js?id=XXXXXXXXXXX"),
+        rx.script(
+            """
+            windows.datalayer = window.datalayer || [];
+            function gtag(){datalayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'XXXXXXXXX');
+            """
+        ),
+    ],
 )
 app.add_page(
     index,
-    title="JosantosDev | Te enseño programación y desarrollo de software.",
-    description="Hola, mi nombre es Jonathan Santos. Soy ingeniero de software, desarrollo freelancer full-stack y divulgador.",
+    title=title,
+    description=description,
+    image="logo.png",
+    meta=[
+        {"name": "og:type", "content": "website"},
+        {"name": "og:title", "content": title},
+        {"name": "og:description", "content": description},
+        {"name": "og:image", "content": preview},
+        {"name": "twitter:card", "content": "sumamary_large_image"},
+        {"name": "twitter:site", "content": "@josantosdev"},
+    ],
 )
