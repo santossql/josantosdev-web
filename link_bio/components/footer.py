@@ -8,7 +8,7 @@ now_year = datetime.today().year
 def footer() -> rx.Component:
     return rx.vstack(
         rx.image(
-            src="icons/logo_dev.svg",
+            src="//icons/logo_dev.svg",
             alt="Logo",
             height=Size.VERY_BIG.value,
         ),

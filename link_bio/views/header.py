@@ -16,7 +16,7 @@ def header() -> rx.Component:
             rx.avatar(
                 fallback="JS",
                 size="6",
-                src="avatar.jpg",
+                src="/avatar.jpg",
                 radius="full",
                 color=TextColor.BODY.value,
                 bg=Color.CONTENT.value,
@@ -40,27 +40,27 @@ def header() -> rx.Component:
                 rx.vstack(
                     rx.hstack(
                         link_icon(
-                            "icons/linkedin.svg",
+                            "/icons/linkedin.svg",
                             "https://linkedin.com",
-                            "Linkedin"
+                   "Linkedin"
                         ),
                         link_icon(
-                            "icons/github.svg",
+                            "/icons/github.svg",
                             "https://github.com",
                             "github"                     
                         ),
                         link_icon(
-                            "icons/x-twitter.svg",
+                            "/icons/x-twitter.svg",
                             "https://twitter.com",
-                            "X"                        
+                                     "X"                        
                         ),
                         link_icon(
-                            "icons/instagram.svg",
+                            "/icons/instagram.svg",
                             "https://instagram.com",
                             "Instagram"                        
                         ),
                         link_icon(
-                            "icons/facebook.svg",
+                            "/icons/facebook.svg",
                             "https://instagram.com",
                             "Facebook"                        
                         ),

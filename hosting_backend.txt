@@ -1,0 +1,6 @@
+# Docker hosting
+
+raiway.com
+render
+fly.io
+fl0.com

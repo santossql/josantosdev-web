@@ -8,12 +8,12 @@ def sponsors() -> rx.Component:
         title("Certificaciónes"),
         rx.hstack(
             link_sponsor(
-                "icons/hyland_onbase_admin.png",
+                "/icons/hyland_onbase_admin.png",
                 const.HYLAND_URL,
                 "Hylan Onbase"
             ),
             link_sponsor(
-                "icons/oracle_certifier.png",
+                "/icons/oracle_certifier.png",
                 const.ORACLE_URL,
                 "Oracle"
             ),
