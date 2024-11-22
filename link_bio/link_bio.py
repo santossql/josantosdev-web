@@ -3,6 +3,8 @@ from link_bio.styles.styles import STYLESHEETS, BASE_STYLE
 from link_bio.pages.index import index
 from link_bio.pages.courses import courses
 
+class State(rx.State):
+    pass
 
 app = rx.App(
     stylesheets=STYLESHEETS,
